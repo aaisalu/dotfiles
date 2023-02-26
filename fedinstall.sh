@@ -26,10 +26,10 @@ sudo dnf install intel-media-driver -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 #some misc
-sudo dnf install -y btop neofetch timeshift zsh openssl VirtualBox gnome-tweaks
+sudo dnf install -y btop neofetch timeshift zsh openssl gnome-tweaks
 
 #install application
-flatpak install flathub -y com.brave.Browser org.telegram.desktop com.discordapp.Discord com.mattjakeman.ExtensionManager com.obsproject.Studio org.gimp.GIMP org.qbittorrent.qBittorrent org.telegram.desktop org.videolan.VLC us.zoom.Zoom net.hovancik.Stretchly com.anydesk.Anydesk
+flatpak install flathub -y com.brave.Browser org.telegram.desktop com.discordapp.Discord com.mattjakeman.ExtensionManager com.obsproject.Studio org.gimp.GIMP org.qbittorrent.qBittorrent org.videolan.VLC us.zoom.Zoom net.hovancik.Stretchly com.anydesk.Anydesk
 
 #for my crap qualcomm Wireless Adapter
 sudo systemctl disable NetworkManager-wait-online.service
@@ -56,3 +56,6 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 
 #p10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+#nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
